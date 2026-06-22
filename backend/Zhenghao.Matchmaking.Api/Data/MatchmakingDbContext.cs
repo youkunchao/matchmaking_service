@@ -43,8 +43,8 @@ public class MatchmakingDbContext : DbContext
 
         modelBuilder.Entity<User>()
             .HasMany(u => u.ChatMessages)
-            .WithOne(c => c.Sender)
-            .HasForeignKey(c => c.SenderId)
+            .WithOne(c => c.FromUser)
+            .HasForeignKey(c => c.FromUserId)
             .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<User>()

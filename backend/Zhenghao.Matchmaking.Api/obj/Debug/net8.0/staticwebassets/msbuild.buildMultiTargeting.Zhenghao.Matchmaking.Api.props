@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Zhenghao.Matchmaking.Api.props" />
+</Project>
