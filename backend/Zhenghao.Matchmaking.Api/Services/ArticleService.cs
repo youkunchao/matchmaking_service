@@ -26,9 +26,7 @@ public class ArticleService : IArticleService
     {
         article.CreatedAt = DateTime.Now;
         article.UpdatedAt = DateTime.Now;
-        await _articleRepository.AddAsync(article);
-        await _articleRepository.SaveChangesAsync();
-        return article;
+        return await _articleRepository.AddAsync(article);
     }
 
     public async Task<Article> UpdateArticleAsync(Guid id, Article article)
@@ -45,9 +43,7 @@ public class ArticleService : IArticleService
         existingArticle.Author = article.Author;
         existingArticle.UpdatedAt = DateTime.Now;
 
-        _articleRepository.Update(existingArticle);
-        await _articleRepository.SaveChangesAsync();
-        return existingArticle;
+        return await _articleRepository.UpdateAsync(existingArticle);
     }
 
     public async Task<bool> DeleteArticleAsync(Guid id)
@@ -56,8 +52,7 @@ public class ArticleService : IArticleService
         if (article == null)
             return false;
 
-        _articleRepository.Delete(article);
-        await _articleRepository.SaveChangesAsync();
+        await _articleRepository.DeleteAsync(id);
         return true;
     }
 
@@ -71,9 +66,7 @@ public class ArticleService : IArticleService
         article.PublishedAt = DateTime.Now;
         article.UpdatedAt = DateTime.Now;
 
-        _articleRepository.Update(article);
-        await _articleRepository.SaveChangesAsync();
-        return article;
+        return await _articleRepository.UpdateAsync(article);
     }
 
     public async Task IncrementViewsAsync(Guid id)
@@ -82,8 +75,7 @@ public class ArticleService : IArticleService
         if (article != null)
         {
             article.Views++;
-            _articleRepository.Update(article);
-            await _articleRepository.SaveChangesAsync();
+            await _articleRepository.UpdateAsync(article);
         }
     }
 }

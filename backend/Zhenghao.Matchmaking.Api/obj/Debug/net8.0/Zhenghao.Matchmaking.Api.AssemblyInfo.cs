@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Zhenghao.Matchmaking.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3a749eddf2c0c99d4c8f4f43fc6de317e20409b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d10b8b0e5fdc01dbb171219d379b99729739f53")]
 [assembly: System.Reflection.AssemblyProductAttribute("Zhenghao.Matchmaking.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Zhenghao.Matchmaking.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

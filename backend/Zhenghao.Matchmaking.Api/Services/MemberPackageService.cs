@@ -26,9 +26,7 @@ public class MemberPackageService : IMemberPackageService
     {
         package.CreatedAt = DateTime.Now;
         package.UpdatedAt = DateTime.Now;
-        await _packageRepository.AddAsync(package);
-        await _packageRepository.SaveChangesAsync();
-        return package;
+        return await _packageRepository.AddAsync(package);
     }
 
     public async Task<MemberPackage> UpdatePackageAsync(Guid id, MemberPackage package)
@@ -46,9 +44,7 @@ public class MemberPackageService : IMemberPackageService
         existingPackage.Status = package.Status;
         existingPackage.UpdatedAt = DateTime.Now;
 
-        _packageRepository.Update(existingPackage);
-        await _packageRepository.SaveChangesAsync();
-        return existingPackage;
+        return await _packageRepository.UpdateAsync(existingPackage);
     }
 
     public async Task<bool> DeletePackageAsync(Guid id)
@@ -57,8 +53,7 @@ public class MemberPackageService : IMemberPackageService
         if (package == null)
             return false;
 
-        _packageRepository.Delete(package);
-        await _packageRepository.SaveChangesAsync();
+        await _packageRepository.DeleteAsync(id);
         return true;
     }
 }
