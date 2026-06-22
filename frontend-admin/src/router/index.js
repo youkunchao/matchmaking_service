@@ -7,6 +7,8 @@ import ActivityManagement from '../views/ActivityManagement.vue'
 import OrderManagement from '../views/OrderManagement.vue'
 import ContentManagement from '../views/ContentManagement.vue'
 import AuditCenter from '../views/AuditCenter.vue'
+import PackageManagement from '../views/PackageManagement.vue'
+import ArticleManagement from '../views/ArticleManagement.vue'
 
 const routes = [
   {
@@ -54,6 +56,18 @@ const routes = [
     path: '/audit',
     name: 'AuditCenter',
     component: AuditCenter,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/packages',
+    name: 'PackageManagement',
+    component: PackageManagement,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/articles',
+    name: 'ArticleManagement',
+    component: ArticleManagement,
     meta: { requiresAuth: true }
   }
 ]

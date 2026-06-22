@@ -32,6 +32,14 @@
             <el-icon><component :is="icons.ShoppingCart" /></el-icon>
             <span>订单管理</span>
           </el-menu-item>
+          <el-menu-item index="/packages" @click="navigate('/packages')">
+            <el-icon><component :is="icons.Box" /></el-icon>
+            <span>套餐管理</span>
+          </el-menu-item>
+          <el-menu-item index="/articles" @click="navigate('/articles')">
+            <el-icon><component :is="icons.Notebook" /></el-icon>
+            <span>文章管理</span>
+          </el-menu-item>
           <el-menu-item index="/content" @click="navigate('/content')">
             <el-icon><component :is="icons.Document" /></el-icon>
             <span>内容管理</span>
@@ -75,6 +83,8 @@ const pageTitleMap = {
   '/hongniang': '红娘管理',
   '/activities': '活动管理',
   '/orders': '订单管理',
+  '/packages': '套餐管理',
+  '/articles': '文章管理',
   '/content': '内容管理',
   '/audit': '审核中心'
 }

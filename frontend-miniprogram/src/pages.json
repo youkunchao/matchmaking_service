@@ -55,6 +55,18 @@
       "style": {
         "navigationBarTitleText": "聊天"
       }
+    },
+    {
+      "path": "pages/order-detail/order-detail",
+      "style": {
+        "navigationBarTitleText": "订单详情"
+      }
+    },
+    {
+      "path": "pages/packages/packages",
+      "style": {
+        "navigationBarTitleText": "会员套餐"
+      }
     }
   ],
   "globalStyle": {

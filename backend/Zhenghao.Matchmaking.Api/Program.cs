@@ -71,6 +71,7 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IActivityRepository, ActivityRepository>();
 builder.Services.AddScoped<IHongniangRepository, HongniangRepository>();
 builder.Services.AddScoped<IMemberPackageRepository, MemberPackageRepository>();
+builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
 
 // Register Services
 builder.Services.AddScoped<IUserService, UserService>();
@@ -80,6 +81,8 @@ builder.Services.AddScoped<IMeetRequestService, MeetRequestService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IActivityService, ActivityService>();
 builder.Services.AddScoped<IHongniangService, HongniangService>();
+builder.Services.AddScoped<IMemberPackageService, MemberPackageService>();
+builder.Services.AddScoped<IArticleService, ArticleService>();
 
 // Add CORS policy
 builder.Services.AddCors(options =>

@@ -20,6 +20,7 @@ public class MatchmakingDbContext : DbContext
     public DbSet<Order> Orders { get; set; }
     public DbSet<Activity> Activities { get; set; }
     public DbSet<ActivityParticipant> ActivityParticipants { get; set; }
+    public DbSet<Article> Articles { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
