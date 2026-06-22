@@ -10,29 +10,29 @@
     <section class="py-20 bg-gray-50">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div v-for="package in packages" :key="package.name" 
+          <div v-for="pkg in packages" :key="pkg.name" 
                class="card relative overflow-hidden" 
-               :class="{ 'border-2 border-primary-500': package.featured }">
-            <div v-if="package.featured" class="absolute top-0 right-0 bg-primary-500 text-white text-xs px-3 py-1">
+               :class="{ 'border-2 border-primary-500': pkg.featured }">
+            <div v-if="pkg.featured" class="absolute top-0 right-0 bg-primary-500 text-white text-xs px-3 py-1">
               热门推荐
             </div>
             <div class="text-center mb-6">
-              <h3 class="text-xl font-semibold mb-2">{{ package.name }}</h3>
+              <h3 class="text-xl font-semibold mb-2">{{ pkg.name }}</h3>
               <div class="flex items-baseline justify-center gap-1">
-                <span class="text-4xl font-bold text-primary-500">{{ package.price }}</span>
-                <span class="text-gray-500">/{{ package.duration }}</span>
+                <span class="text-4xl font-bold text-primary-500">{{ pkg.price }}</span>
+                <span class="text-gray-500">/{{ pkg.duration }}</span>
               </div>
             </div>
             
             <ul class="space-y-3 mb-6">
-              <li v-for="feature in package.features" :key="feature" class="flex items-start gap-2">
+              <li v-for="feature in pkg.features" :key="feature" class="flex items-start gap-2">
                 <span class="text-green-500 mt-1">✓</span>
                 <span class="text-gray-600">{{ feature }}</span>
               </li>
             </ul>
             
             <button class="w-full py-3 rounded-lg font-semibold transition-colors"
-                    :class="package.featured ? 'bg-primary-500 text-white hover:bg-primary-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'">
+                    :class="pkg.featured ? 'bg-primary-500 text-white hover:bg-primary-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'">
               立即购买
             </button>
           </div>
@@ -48,17 +48,17 @@
             <thead>
               <tr class="bg-gray-100">
                 <th class="border border-gray-300 px-4 py-3 text-left">服务内容</th>
-                <th v-for="package in packages" :key="package.name" class="border border-gray-300 px-4 py-3 text-center">
-                  {{ package.name }}
+                <th v-for="pkg in packages" :key="pkg.name" class="border border-gray-300 px-4 py-3 text-center">
+                  {{ pkg.name }}
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="item in comparisonItems" :key="item.name">
                 <td class="border border-gray-300 px-4 py-3">{{ item.name }}</td>
-                <td v-for="package in packages" :key="package.name" class="border border-gray-300 px-4 py-3 text-center">
-                  <span :class="item[package.name] ? 'text-green-500' : 'text-gray-400'">
-                    {{ item[package.name] ? '✓' : '✗' }}
+                <td v-for="pkg in packages" :key="pkg.name" class="border border-gray-300 px-4 py-3 text-center">
+                  <span :class="item[pkg.name] ? 'text-green-500' : 'text-gray-400'">
+                    {{ item[pkg.name] ? '✓' : '✗' }}
                   </span>
                 </td>
               </tr>
