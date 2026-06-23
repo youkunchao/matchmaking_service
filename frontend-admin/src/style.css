@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background-color: #f5f7fa;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.el-menu-item.is-active {
+  background-color: #ef4444 !important;
+  color: white !important;
+}
+
+.el-menu-item.is-active:hover {
+  background-color: #dc2626 !important;
+}
+
+.el-sub-menu.is-active .el-sub-menu__title {
+  color: #ef4444 !important;
+}

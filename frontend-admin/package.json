@@ -1,0 +1,21 @@
+{
+  "name": "zhenghao-matchmaking-admin",
+  "version": "1.0.0",
+  "description": "郑好遇见你管理后台",
+  "scripts": {
+    "dev": "npx vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "axios": "^1.6.7",
+    "element-plus": "^2.6.1",
+    "echarts": "^5.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.1.6"
+  }
+}
